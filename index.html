@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zyvor Kubeza: Kubernetes for the edge, made calm</title>
+<meta name="description" content="A small Kubernetes distribution for edge sites and private clouds, built on K3s, with the Setura Gateway API controller built in. Early preview.">
+<link rel="canonical" href="https://zyvorai.github.io/zyvor-kubeza-site/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zyvor Kubeza: Kubernetes for the edge, made calm">
+<meta property="og:description" content="A small Kubernetes distribution for edge sites and private clouds, built on K3s, with the Setura Gateway API controller built in. Early preview.">
+<meta property="og:image" content="https://zyvorai.github.io/zyvor-kubeza-site/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="assets/site.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.terminal .line{opacity:1!important;animation:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html"><img src="favicon.svg" alt="" width="22" height="22">Zyvor Kubeza</a>
+<nav aria-label="Primary" style="display:contents">
+<a class="hide-sm" href="install.html">Install</a>
+<a class="hide-sm" href="docs.html">Docs</a>
+<a class="hide-sm" href="security.html">Security</a>
+<span class="spacer"></span>
+<a class="buy" href="download.html">Early access</a>
+</nav></div></header>
+<main id="main">
+<section class="hero" style="padding-bottom:0">
+<div class="wrap">
+<p class="eyebrow">Zyvor Kubeza <span class="badge">Preview</span></p>
+<h1>Kubernetes for the edge.<br><span class="grad">Made calm.</span></h1>
+<p class="lede">A small Kubernetes distribution for edge sites and private clouds. One binary to install, upgrade, back up and prove it is hardened.</p>
+<div class="cta"><a class="btn primary" href="download.html">Request early access</a><a class="btn ghost" href="install.html">See the quickstart</a></div>
+<div class="terminal" role="img" aria-label="Terminal mock of zkube plan and zkube install output">
+<div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+<pre aria-hidden="true"><span class="line" style="--i:0"><span class="dim">$</span> zkube plan --profile edge-retail</span>
+<span class="line" style="--i:1"><span class="ok">&#10003;</span> preflight passed        <span class="dim">4 cores, 8 GiB, clock in sync</span></span>
+<span class="line" style="--i:2"><span class="ok">&#10003;</span> gateway                 <span class="dim">Setura (built in, replaces Traefik)</span></span>
+<span class="line" style="--i:3"><span class="ok">&#10003;</span> hardening               <span class="dim">baseline profile</span></span>
+<span class="line" style="--i:4"><span class="dim">  Nothing has been changed. Review the plan, then install.</span></span>
+<span class="line" style="--i:5"> </span>
+<span class="line" style="--i:6"><span class="dim">$</span> zkube install server</span>
+<span class="line" style="--i:7"><span class="ok">&#10003;</span> verified bundle signature</span>
+<span class="line" style="--i:8"><span class="ok">&#10003;</span> cluster ready           <span class="dim">illustrative output</span></span></pre>
+</div>
+</div>
+</section>
+
+<section id="why"><div class="wrap">
+<p class="kicker reveal">Why</p>
+<h2 class="reveal">Edge clusters should be boring.</h2>
+<p class="sub reveal">You run clusters in shops, plants, hospitals and racks nobody visits. Kubeza is built so that installing, upgrading and recovering them is a short, checked, repeatable routine, not an afternoon of YAML.</p>
+<div class="grid">
+<div class="card reveal"><span class="tag">Small</span><h3>Built on K3s</h3><p>A compact, single-binary-friendly Kubernetes base that suits modest hardware, with the pieces an edge site needs already decided.</p></div>
+<div class="card reveal"><span class="tag">Complete</span><h3>Gateway included</h3><p>The Setura Gateway API controller is built in instead of Traefik, so ingress is configured with the standard Gateway API from day one.</p></div>
+<div class="card reveal"><span class="tag">Safe</span><h3>Reversible by design</h3><p>Upgrades roll back automatically when health checks fail. Backups are verified by a real restore, not just a file on disk.</p></div>
+</div></div></section>
+
+<section id="how" class="alt"><div class="wrap">
+<p class="kicker reveal">How it works</p>
+<h2 class="reveal">Three steps. Nothing surprising.</h2>
+<div class="steps">
+<div class="step reveal"><b>1</b><h3>Check</h3><p><code>zkube preflight</code> inspects the host (CPU, memory, disk, time, ports) and tells you what to fix before anything is touched.</p></div>
+<div class="step reveal"><b>2</b><h3>Plan</h3><p><code>zkube plan</code> shows exactly what an install would do for your chosen profile. It changes nothing.</p></div>
+<div class="step reveal"><b>3</b><h3>Install</h3><p><code>zkube install server</code> applies the plan from a verified bundle. <code>zkube doctor</code> confirms the result.</p></div>
+</div></div></section>
+
+<section id="features"><div class="wrap">
+<p class="kicker reveal">Features</p>
+<h2 class="reveal">Everything one binary can carry.</h2>
+<p class="sub reveal">All of it is in early preview and described as planned behaviour.</p>
+<div class="grid">
+<div class="card reveal"><h3>One <code>zkube</code> binary</h3><p>Install, join nodes, upgrade, back up, restore and audit from a single command line.</p></div>
+<div class="card reveal"><h3>Upgrades with automatic rollback</h3><p>If the cluster is not healthy after an upgrade, Kubeza returns to the previous version for you.</p></div>
+<div class="card reveal"><h3>Backup and verified restore</h3><p>Restores are exercised and checked, so you learn a backup is good before the day you need it.</p></div>
+<div class="card reveal"><h3>Hardening with evidence</h3><p>Apply a hardening profile, then export an auditor evidence bundle that shows what was configured.</p></div>
+<div class="card reveal"><h3>Offline signed bundles</h3><p>Install and upgrade without internet access from bundles whose signatures are verified before use.</p></div>
+<div class="card reveal"><h3>Optional Netra observability</h3><p>Turn on Netra for eBPF-based network observability when you want to see traffic, and leave it off when you do not.</p></div>
+<div class="card reveal"><h3>Setura Gateway built in</h3><p>A Gateway API controller ships with the distribution instead of Traefik.</p></div>
+<div class="card reveal"><h3>Add-ons</h3><p>Optional components you enable per site, installed and upgraded through the same tool.</p></div>
+<div class="card reveal"><h3>Solution profiles</h3><p>Start from a profile that matches your site rather than from a blank cluster.</p></div>
+</div></div></section>
+
+<section id="solutions" class="alt"><div class="wrap">
+<p class="kicker reveal">Solutions</p>
+<h2 class="reveal">Start from your kind of site.</h2>
+<p class="sub reveal">Profiles are starting points: defaults for add-ons and hardening that you can change.</p>
+<div class="sols">
+<div class="sol reveal"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 16l3-8h22l3 8M8 16v16h24V16M16 32V22h8v10"/></svg><h3>Edge Retail</h3><p>Stores and branches with small hardware and patchy links.</p></div>
+<div class="sol reveal"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M10 28a6 6 0 010-12 8 8 0 0115-2 6 6 0 011 12z"/></svg><h3>Private Cloud with VMs</h3><p>Containers and virtual machines side by side.</p></div>
+<div class="sol reveal"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="10" y="10" width="20" height="20" rx="3"/><path d="M15 6v4M20 6v4M25 6v4M15 30v4M20 30v4M25 30v4M6 15h4M6 20h4M6 25h4M30 15h4M30 20h4M30 25h4"/></svg><h3>GPU AI</h3><p>Run inference close to where data is produced.</p></div>
+<div class="sol reveal"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 32V16l8 5v-5l8 5v-5l8 5V8h4v24z"/></svg><h3>Factory Edge</h3><p>Plant-floor workloads that must keep running.</p></div>
+<div class="sol reveal"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M16 6h8v10h10v8H24v10h-8V24H6v-8h10z"/></svg><h3>Hospital Edge</h3><p>On-site clusters with strict hardening and evidence needs.</p></div>
+</div></div></section>
+
+<section id="compare"><div class="wrap">
+<p class="kicker reveal">Compared with K3s alone</p>
+<h2 class="reveal">What Kubeza adds.</h2>
+<p class="sub reveal">K3s is an excellent Kubernetes base and Kubeza is built on it. This is what we add around it, not a verdict on anyone else's work.</p>
+<div class="tablewrap reveal"><table>
+<thead><tr><th>Capability</th><th>K3s alone</th><th>Zyvor Kubeza (Preview)</th></tr></thead>
+<tbody>
+<tr><td>Kubernetes distribution</td><td>Yes</td><td>Built on K3s</td></tr>
+<tr><td>Ingress</td><td>Bundled controller</td><td>Setura Gateway API controller built in</td></tr>
+<tr><td>Pre-install host checks and a dry-run plan</td><td>Not part of it</td><td>Yes: <code>zkube preflight</code>, <code>zkube plan</code></td></tr>
+<tr><td>Upgrades with automatic rollback</td><td>Manual</td><td>Yes</td></tr>
+<tr><td>Backup with verified restore</td><td>Snapshots</td><td>Backup plus a verified restore</td></tr>
+<tr><td>Hardening with auditor evidence bundle</td><td>Guides</td><td>Yes</td></tr>
+<tr><td>Offline signed bundles</td><td>Air-gap install supported</td><td>Signed, verified bundles</td></tr>
+<tr><td>Solution profiles and add-ons</td><td>Bring your own</td><td>Yes</td></tr>
+<tr><td>Licence and support</td><td>Open source</td><td>Zyvor Production Licence, commercial</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section id="security" class="alt"><div class="wrap">
+<p class="kicker reveal">Security and offline first</p>
+<h2 class="reveal">Verify first. Then run. Offline if you must.</h2>
+<p class="sub reveal">Every artefact is meant to be checked before it is trusted, and nothing needs the internet to work once it is on site.</p>
+<div class="grid two">
+<div class="card reveal"><h3>Signed and checked</h3><p>Releases are planned to ship with checksums, a signature and an SBOM, and the installer verifies bundles before it uses them.</p></div>
+<div class="card reveal"><h3>Offline from the start</h3><p>Signed offline bundles let you install and upgrade sites with no outbound access.</p></div>
+</div>
+<p class="sub reveal"><a href="security.html">Read the security page</a></p>
+</div></section>
+
+<section id="licence"><div class="wrap promise">
+<p class="kicker reveal">The never-brick promise</p>
+<p class="big reveal">The licence never stops a running cluster.</p>
+<p class="sub reveal">Kubeza uses a signed offline licence, checked locally with no call home. If it expires or is missing, your running cluster keeps running. Only new installs and upgrades are affected.</p>
+</div></section>
+
+<section id="faq" class="alt"><div class="wrap">
+<p class="kicker reveal">FAQ</p>
+<h2 class="reveal">Questions, answered plainly.</h2>
+<div class="faq">
+<details><summary>Is Zyvor Kubeza available today?</summary><p>No. It is an early preview and no binary has been released yet. You can request early access from the <a href="download.html">download page</a>.</p></details>
+<details><summary>Is it K3s?</summary><p>No. Zyvor Kubeza is built on K3s and adds its own tooling and components. K3s is a trademark of SUSE, and Zyvor Kubeza is not affiliated with SUSE or Rancher.</p></details>
+<details><summary>Why Setura instead of Traefik?</summary><p>Setura is a Gateway API controller from Zyvor that is built into the distribution, so ingress uses the standard Gateway API from the start.</p></details>
+<details><summary>What happens if my licence expires?</summary><p>Your running cluster keeps running. The licence is signed and verified offline and never stops a running cluster.</p></details>
+<details><summary>Does it work without internet?</summary><p>That is the plan: offline signed bundles for install and upgrade. This is part of the preview.</p></details>
+<details><summary>What does it cost?</summary><p>See <a href="https://zyvor.dev/pricing">zyvor.dev/pricing</a> or write to <a href="mailto:sales@zyvor.dev">sales@zyvor.dev</a>.</p></details>
+</div></div></section>
+
+<section><div class="wrap" style="text-align:center">
+<h2 class="reveal">Be early.</h2>
+<p class="sub reveal">The first preview build is on its way.</p>
+<div class="cta"><a class="btn primary" href="download.html">Request early access</a></div>
+</div></section>
+</main>
+<footer><div class="wrap">
+<div class="cols">
+<div><h4>Product</h4><a href="index.html#how">How it works</a><a href="index.html#solutions">Solutions</a><a href="index.html#compare">Compared with K3s alone</a></div>
+<div><h4>Get started</h4><a href="install.html">Install (Preview)</a><a href="download.html">Download</a><a href="docs.html">Docs</a></div>
+<div><h4>Trust</h4><a href="security.html">Security</a><a href="index.html#licence">Licence promise</a><a href="mailto:security@zyvor.dev">security@zyvor.dev</a></div>
+<div><h4>Company</h4><a href="https://zyvor.dev/pricing">Pricing</a><a href="https://github.com/zyvorai/zyvor-kubeza-site">GitHub</a><a href="mailto:sales@zyvor.dev">sales@zyvor.dev</a></div>
+</div>
+<p>Zyvor Kubeza is under the Zyvor Production Licence v2.0. A 30-day trial is available on request from sales@zyvor.dev; production and any other use needs a paid Order under the Zyvor Production Licence v2.0. See <a href="https://github.com/zyvorai/zyvor-kubeza-site/blob/main/LICENSE">LICENSE</a> and <a href="https://github.com/zyvorai/zyvor-kubeza-site/blob/main/NOTICE">NOTICE</a>. Pricing: <a href="https://zyvor.dev/pricing">zyvor.dev/pricing</a>.</p>
+<p>Early preview: nothing described here is generally available yet, and features marked Preview may change. Kubernetes is a registered trademark of The Linux Foundation. K3s is a trademark of SUSE. Zyvor Kubeza is built on K3s but is not K3s, and is not affiliated with, endorsed by or sponsored by SUSE or Rancher. Other names are trademarks of their owners.</p>
+<p>&copy; 2026 Zyvor AI Labs Private Limited.</p>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
