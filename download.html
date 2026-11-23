@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download Zyvor Kubeza: early access</title>
+<meta name="description" content="No binary is released yet. Request early access to the first Zyvor Kubeza preview build and see how releases will be verified.">
+<link rel="canonical" href="https://zyvorai.github.io/zyvor-kubeza-site/download.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Download Zyvor Kubeza: early access">
+<meta property="og:description" content="No binary is released yet. Request early access to the first Zyvor Kubeza preview build and see how releases will be verified.">
+<meta property="og:image" content="https://zyvorai.github.io/zyvor-kubeza-site/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="assets/site.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html"><img src="favicon.svg" alt="" width="22" height="22">Zyvor Kubeza</a>
+<nav aria-label="Primary" style="display:contents">
+<a class="hide-sm" href="install.html">Install</a>
+<a class="hide-sm" href="docs.html">Docs</a>
+<a class="hide-sm" href="security.html">Security</a>
+<span class="spacer"></span>
+<a class="buy" href="download.html" aria-current="page">Early access</a>
+</nav></div></header>
+<main id="main">
+<div class="page"><div class="wrap narrow">
+<p class="badge">Preview</p>
+<h1>Download</h1>
+<p class="lede">First preview build is on its way. Request early access.</p>
+<div class="cta" style="justify-content:flex-start"><a class="btn primary" href="mailto:sales@zyvor.dev?subject=Zyvor%20Kubeza%20early%20access">Request early access</a><a class="btn ghost" href="https://github.com/zyvorai/zyvor-kubeza-site/releases">Releases page</a></div>
+<div class="note"><b>Honest status.</b> Nothing is generally available and no binary has been released. The Releases page will list builds when they exist; until then it is empty.</div>
+<h2>How you will verify a release</h2>
+<p>This is the plan. Each release is intended to carry a checksum file, a signature and an SBOM. The file names below are placeholders.</p>
+<h3>1. Checksums</h3>
+<pre class="code">sha256sum -c SHA256SUMS --ignore-missing</pre>
+<h3>2. Signature</h3>
+<pre class="code"># signing tool and key to be published with the first release
+&lt;verify-tool&gt; verify SHA256SUMS SHA256SUMS.sig</pre>
+<h3>3. SBOM</h3>
+<pre class="code"># an SBOM file will be published next to each artefact
+less zkube.sbom.json</pre>
+<h2>Pricing and licence</h2>
+<p>Pricing is at <a href="https://zyvor.dev/pricing">zyvor.dev/pricing</a>. Use is under the Zyvor Production Licence v2.0; a 30-day trial is available on request from sales@zyvor.dev.</p>
+</div></div>
+</main>
+<footer><div class="wrap">
+<div class="cols">
+<div><h4>Product</h4><a href="index.html#how">How it works</a><a href="index.html#solutions">Solutions</a><a href="index.html#compare">Compared with K3s alone</a></div>
+<div><h4>Get started</h4><a href="install.html">Install (Preview)</a><a href="download.html">Download</a><a href="docs.html">Docs</a></div>
+<div><h4>Trust</h4><a href="security.html">Security</a><a href="index.html#licence">Licence promise</a><a href="mailto:security@zyvor.dev">security@zyvor.dev</a></div>
+<div><h4>Company</h4><a href="https://zyvor.dev/pricing">Pricing</a><a href="https://github.com/zyvorai/zyvor-kubeza-site">GitHub</a><a href="mailto:sales@zyvor.dev">sales@zyvor.dev</a></div>
+</div>
+<p>Zyvor Kubeza is under the Zyvor Production Licence v2.0. A 30-day trial is available on request from sales@zyvor.dev; production and any other use needs a paid Order under the Zyvor Production Licence v2.0. See <a href="https://github.com/zyvorai/zyvor-kubeza-site/blob/main/LICENSE">LICENSE</a> and <a href="https://github.com/zyvorai/zyvor-kubeza-site/blob/main/NOTICE">NOTICE</a>. Pricing: <a href="https://zyvor.dev/pricing">zyvor.dev/pricing</a>.</p>
+<p>Early preview: nothing described here is generally available yet, and features marked Preview may change. Kubernetes is a registered trademark of The Linux Foundation. K3s is a trademark of SUSE. Zyvor Kubeza is built on K3s but is not K3s, and is not affiliated with, endorsed by or sponsored by SUSE or Rancher. Other names are trademarks of their owners.</p>
+<p>&copy; 2026 Zyvor AI Labs Private Limited.</p>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

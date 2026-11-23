@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zyvor Kubeza docs: concepts and commands (Preview)</title>
+<meta name="description" content="Concepts and a command overview for Zyvor Kubeza: profiles, bundles, licence, hardening, upgrades and backups. Preview documentation.">
+<link rel="canonical" href="https://zyvorai.github.io/zyvor-kubeza-site/docs.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zyvor Kubeza docs: concepts and commands (Preview)">
+<meta property="og:description" content="Concepts and a command overview for Zyvor Kubeza: profiles, bundles, licence, hardening, upgrades and backups. Preview documentation.">
+<meta property="og:image" content="https://zyvorai.github.io/zyvor-kubeza-site/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="assets/site.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html"><img src="favicon.svg" alt="" width="22" height="22">Zyvor Kubeza</a>
+<nav aria-label="Primary" style="display:contents">
+<a class="hide-sm" href="install.html">Install</a>
+<a class="hide-sm" href="docs.html" aria-current="page">Docs</a>
+<a class="hide-sm" href="security.html">Security</a>
+<span class="spacer"></span>
+<a class="buy" href="download.html">Early access</a>
+</nav></div></header>
+<main id="main">
+<div class="page"><div class="wrap narrow">
+<p class="badge">Preview</p>
+<h1>Docs</h1>
+<p class="lede">An overview of the ideas and commands. Full documentation will arrive with the first build; commands here are planned and may change.</p>
+<h2>Concepts</h2>
+<h3>Built on K3s</h3><p>Zyvor Kubeza is built on K3s and is not K3s. K3s is a trademark of SUSE; Zyvor Kubeza is not affiliated with SUSE or Rancher.</p>
+<h3>Setura Gateway</h3><p>The Setura Gateway API controller is built in instead of Traefik. Routing is configured with Gateway API resources.</p>
+<h3>Netra (optional)</h3><p>eBPF network observability you can enable per cluster.</p>
+<h3>Profiles</h3><p>Edge Retail, Private Cloud with VMs, GPU AI, Factory Edge and Hospital Edge: starting points for add-ons and hardening.</p>
+<h3>Bundles</h3><p>Signed archives for offline install and upgrade, verified before use.</p>
+<h3>Licence</h3><p>A signed offline licence, verified locally. It never stops a running cluster.</p>
+<h2>Commands</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Command</th><th>Purpose</th></tr></thead><tbody>
+<tr><td><code>zkube preflight</code></td><td>Check the host before install.</td></tr>
+<tr><td><code>zkube plan</code></td><td>Show what an install would do. Changes nothing.</td></tr>
+<tr><td><code>zkube install server</code></td><td>Install a server node.</td></tr>
+<tr><td><code>zkube doctor</code></td><td>Check cluster health and configuration.</td></tr>
+<tr><td><code>zkube upgrade</code></td><td>Upgrade, with automatic rollback on failure.</td></tr>
+<tr><td><code>zkube backup</code> / <code>restore</code></td><td>Back up and perform a verified restore.</td></tr>
+<tr><td><code>zkube harden</code></td><td>Apply hardening and export an auditor evidence bundle.</td></tr>
+<tr><td><code>zkube addon</code></td><td>Enable and manage add-ons.</td></tr>
+</tbody></table></div>
+<p>Exact subcommands and flags for everything beyond preflight, plan, install and doctor are not final.</p>
+<h2>Links</h2>
+<ul><li><a href="install.html">Quickstart</a></li><li><a href="download.html">Download and verification</a></li><li><a href="security.html">Security</a></li><li><a href="https://zyvor.dev/pricing">Pricing</a></li></ul>
+</div></div>
+</main>
+<footer><div class="wrap">
+<div class="cols">
+<div><h4>Product</h4><a href="index.html#how">How it works</a><a href="index.html#solutions">Solutions</a><a href="index.html#compare">Compared with K3s alone</a></div>
+<div><h4>Get started</h4><a href="install.html">Install (Preview)</a><a href="download.html">Download</a><a href="docs.html">Docs</a></div>
+<div><h4>Trust</h4><a href="security.html">Security</a><a href="index.html#licence">Licence promise</a><a href="mailto:security@zyvor.dev">security@zyvor.dev</a></div>
+<div><h4>Company</h4><a href="https://zyvor.dev/pricing">Pricing</a><a href="https://github.com/zyvorai/zyvor-kubeza-site">GitHub</a><a href="mailto:sales@zyvor.dev">sales@zyvor.dev</a></div>
+</div>
+<p>Zyvor Kubeza is under the Zyvor Production Licence v2.0. A 30-day trial is available on request from sales@zyvor.dev; production and any other use needs a paid Order under the Zyvor Production Licence v2.0. See <a href="https://github.com/zyvorai/zyvor-kubeza-site/blob/main/LICENSE">LICENSE</a> and <a href="https://github.com/zyvorai/zyvor-kubeza-site/blob/main/NOTICE">NOTICE</a>. Pricing: <a href="https://zyvor.dev/pricing">zyvor.dev/pricing</a>.</p>
+<p>Early preview: nothing described here is generally available yet, and features marked Preview may change. Kubernetes is a registered trademark of The Linux Foundation. K3s is a trademark of SUSE. Zyvor Kubeza is built on K3s but is not K3s, and is not affiliated with, endorsed by or sponsored by SUSE or Rancher. Other names are trademarks of their owners.</p>
+<p>&copy; 2026 Zyvor AI Labs Private Limited.</p>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -15,7 +15,7 @@
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
 <link rel="stylesheet" href="assets/site.css">
-<noscript><style>.reveal{opacity:1!important;transform:none!important}.terminal .line{opacity:1!important;animation:none!important}</style></noscript>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -106,8 +106,8 @@
 <tbody>
 <tr><td>Kubernetes distribution</td><td>Yes</td><td>Built on K3s</td></tr>
 <tr><td>Ingress</td><td>Bundled controller</td><td>Setura Gateway API controller built in</td></tr>
-<tr><td>Pre-install host checks and a dry-run plan</td><td>Not part of it</td><td>Yes: <code>zkube preflight</code>, <code>zkube plan</code></td></tr>
-<tr><td>Upgrades with automatic rollback</td><td>Manual</td><td>Yes</td></tr>
+<tr><td>Pre-install host checks and a dry-run plan</td><td>Not included</td><td>Yes: <code>zkube preflight</code>, <code>zkube plan</code></td></tr>
+<tr><td>Upgrades with automatic rollback</td><td>Separate tooling</td><td>Yes</td></tr>
 <tr><td>Backup with verified restore</td><td>Snapshots</td><td>Backup plus a verified restore</td></tr>
 <tr><td>Hardening with auditor evidence bundle</td><td>Guides</td><td>Yes</td></tr>
 <tr><td>Offline signed bundles</td><td>Air-gap install supported</td><td>Signed, verified bundles</td></tr>

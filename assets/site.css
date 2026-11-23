@@ -50,10 +50,10 @@ h1{font-size:clamp(44px,8vw,92px);line-height:1.03;font-weight:700;letter-spacin
 .bar{display:flex;gap:8px;padding:16px 20px}.bar i{width:12px;height:12px;border-radius:50%;display:block;background:#ff5f57}.bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
 .terminal pre,pre.code{font-family:var(--mono);font-size:clamp(11px,1.9vw,15px);line-height:1.75;padding:4px 26px 30px;overflow-x:auto;color:var(--term-ink)}
 .ok{color:#30d158}.dim{color:#8e8e93}.err{color:#ff6961}.warn{color:#ffd60a}.hl{color:#64d2ff}
-.line{display:block;opacity:1}
+.line{display:inline}
 @media(prefers-reduced-motion:no-preference){
- .terminal .line{opacity:0;animation:ty .5s forwards;animation-delay:calc(var(--i)*.28s + .3s)}
- @keyframes ty{to{opacity:1}}
+ .terminal .line{animation:ty .5s backwards;animation-delay:calc(var(--i)*.28s + .3s)}
+ @keyframes ty{from{opacity:0}}
  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
  .reveal.in{opacity:1;transform:none}
  .btn,.card,.sol{transition:transform .25s,background .25s}
