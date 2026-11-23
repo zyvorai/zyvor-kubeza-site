@@ -108,6 +108,7 @@ details p{margin-top:12px;color:var(--ink-2);font-size:17px}
 footer{background:var(--gray);padding:56px 0 40px;font-size:13px;color:var(--ink-2)}
 footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:28px}
 footer h4{font-size:12px;color:var(--ink);margin-bottom:8px}
-footer a{display:block;color:var(--ink-2);padding:3px 0}
+footer .cols a{display:block;color:var(--ink-2);padding:3px 0}
+footer p a{color:var(--ink-2);text-decoration:underline;text-underline-offset:2px}
 footer p{margin-top:10px;max-width:900px}
 @media(max-width:700px){footer .cols{grid-template-columns:1fr 1fr}}
